@@ -1,0 +1,182 @@
+/* Importando fontes */
+@font-face {
+    font-family: myriad;
+    src: url(Fontes/Myriad\ Pro\ Bold\ SemiExtended.ttf);
+}
+
+@font-face {
+    font-family: boldfont;
+    src: url(Fontes/THEBOLDFONT-FREEVERSION.ttf);
+}
+
+@font-face {
+    font-family: bebas;
+    src: url(Fontes/BebasNeue-Regular.ttf);
+}
+/* Animações */
+@keyframes BordaAnimada {
+    0% {
+        background-position: 0;
+    }
+    100% {
+        background-position: 300%;
+    }
+}
+@keyframes opasidade {
+    0% {
+        opacity: 0;
+    }
+    25% {
+        opacity: 1;
+    }
+    75% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+/* Geral */
+* {
+    margin: 0;
+    padding: 0;
+}
+/* Texto */
+h1 {
+    color: aliceblue;
+    font-family: boldfont;
+    font-size: 40px;
+}
+
+h2 {
+    
+    color: aliceblue;
+    font-family: boldfont;
+    font-size: 25px;
+}
+
+h3 {
+    color: aliceblue;
+    font-family: myriad;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+h4 {
+    color: red;
+    font-family: myriad;
+    font-size: 15px; 
+    opacity: 0;
+    cursor: default;
+}
+
+label {
+    color: aliceblue;
+    font-family: arial;
+    font-size: 15px;
+    margin-left: 25px;
+    margin-top: 1px;
+}
+/* Estrutura */
+body {
+    background-color: #151320;
+}
+
+.título {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 120px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+}
+
+.geral {
+    display: flex;
+    position: relative;
+    background-color: #1b1b32;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 20px;
+    height: 350px;
+    width: 350px;
+}
+
+.formulário {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.item2 {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
+.botões {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 86%;
+}
+/* Elementos */
+input {
+    background-color: #151320;
+    color: #ffffff;
+    font-size: 15px;
+    initial-letter: 20px;
+    border: 0;
+    border-radius: 5px;
+    margin-left: 25px;
+    margin-right: auto;
+    height: 25px;
+    width: 300px;
+}
+
+button {
+    background-color: #151320;
+    color: aliceblue;
+    font-family: myriad;
+    letter-spacing: 0.5px;
+    border: #211e37 solid 2px;
+    border-radius: 5px;
+    outline: 2px ;
+    transition: background-color 0.5s ease;
+    height: 30px;
+    width: 120px;
+}
+/* Eventos */
+button:hover {
+    background-color: #0c0b17;
+    cursor: pointer;
+}
+
+.fade {
+    animation: opasidade 5s ease-in-out forwards;
+}
+/* Pseudo-elementos */
+.geral::before, .geral::after {
+    background: linear-gradient(45deg, #ffff00, #00ff00, #0099ff, #001aff, #a200ff, #ff0055, #ff0000, #ffff00, #00ff00, #0099ff, #001aff, #a200ff);
+    background-size: 300%;
+    animation: BordaAnimada 8s linear infinite;
+    content: '';
+    position: absolute;
+    z-index: -1;
+    border-radius: 20px;
+    height: calc(100% + 10px);
+    width: calc(100% + 10px);
+}
+
+.geral::after {
+    filter: blur(30px);
+}
