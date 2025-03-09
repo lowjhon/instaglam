@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="Imagens/InstaglamIcon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>Instaglam</title>
+</head>
+<body>
+     <div class="título"> <!-- Div do título -->
+        <div class="item1">
+            <h1>Instaglam</h1>
+        </div>
+        <div class="item1">
+        <h2>Bem-vindo ao instaglam!</h2>
+        </div>
+    </div>
+     <div class="container"> <!-- Div container -->
+        <div class="geral"> <!-- Div geral -->
+            <h3>Inicie criando sua conta:</h3>
+            <div class="formulário"> <!-- Div do formulário -->
+                <form>
+                    <div class="item2">
+                        <input type="text" name="nome" id="nome" placeholder=" Seu nome de usuário" oninput="usernameValidate()">
+                        <br>
+                        <label for="nome" class="info" id="info1"></label>
+                    </div>
+                    <br>
+                    <div class="item2">
+                        <input type="email" name="email" id="email" placeholder=" Seu email" oninput="emailValidate()">
+                        <br>
+                        <label for="email" class="info" id="info2"></label>
+                    </div>
+                    <br>
+                    <div class="item2">
+                        <input type="password" name="senha" id="senha" placeholder=" Sua senha" oninput="password1Validate(), password2Validate()">
+                        <br>
+                        <label for="senha" class="info" id="info3"></label>
+                    </div>
+                    <br>
+                    <div class="item2">
+                        <input type="password" name="confirmar-senha" id="confirmar-senha" placeholder=" Confirmar sua senha" oninput="password2Validate()">
+                        <br>
+                        <label for="confirmar-senha" class="info" id="info4"></label>
+                    </div>
+                </form>
+            </div>
+            <div class="botões"> <!-- Div dos botões -->
+                <button onclick="validação()" id="botão1">Criar</button>
+                <button onclick="mentira()" id="botão2">Já é membro?</button>
+            </div>
+            <h4 id="erro" class=""></h4>
+        </div>
+    </div>
+    <script src="script.js"> </script>
+</body>
+</html>

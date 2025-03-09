@@ -1,0 +1,106 @@
+/* Importanddo fontes */
+@font-face {
+    font-family: myriad;
+    src: url(Fontes/Myriad\ Pro\ Bold\ SemiExtended.ttf);
+}
+
+@font-face {
+    font-family: boldfont;
+    src: url(Fontes/THEBOLDFONT-FREEVERSION.ttf);
+}
+
+@font-face {
+    font-family: bebas;
+    src: url(Fontes/BebasNeue-Regular.ttf);
+}
+/* Geral */
+* {
+    margin: 0;
+    padding: 0;
+}
+/* Animação */
+@keyframes BordaAnimada {
+    0% {
+        background-position: 0;
+    }
+    100% {
+        background-position: 300%;
+    }
+}
+/* Texto */
+h1 {
+    color: aliceblue;
+    font-family: boldfont;
+}
+
+h2 {
+    color: aliceblue;
+    font-family: boldfont;
+    font-size: 20px;
+}
+
+h3 {
+    color: aliceblue;
+    font-family: bebas;
+    font-size: 40px;
+}
+
+p {
+    color: aliceblue;
+    font-family: myriad;
+    font-size: 25px;
+}
+/* Estrutura */
+body {
+    background-color: #151320;
+    
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.geral {
+    background-color: #17172c;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    border-radius: 20px;
+    height: 400px;
+    width: 400px;
+}
+
+.título {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.informações {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/* Pseudo-elementos */
+.geral::before, .geral::after {
+    background: linear-gradient(45deg, #ffff00, #00ff00, #0099ff, #001aff, #a200ff, #ff0055, #ff0000, #ffff00, #00ff00, #0099ff, #001aff, #a200ff);
+    background-size: 300%;
+    animation: BordaAnimada 8s linear infinite;
+    content: '';
+    position: absolute;
+    z-index: -1;
+    border-radius: 20px;
+    height: 105%;
+    width: 105%;
+}
+
+.geral::after {
+    filter: blur(30px);
+}
